@@ -1,23 +1,18 @@
 {
-  "name": "cursor-plugin-starters",
+  "name": "absorbabot",
   "owner": {
-    "name": "Your Org",
-    "email": "plugins@example.com"
+    "name": "Siddhit Sanghavi",
+    "email": "siddhits@gmail.com"
   },
   "metadata": {
-    "description": "Starter marketplace template for Cursor plugins",
+    "description": "Fold an imported or spare Grok Bot seat into existing teammates.",
     "version": "0.1.0"
   },
   "plugins": [
     {
-      "name": "starter-simple",
-      "source": "./plugins/starter-simple",
-      "description": "Minimal plugin with rules and skills only"
-    },
-    {
-      "name": "starter-advanced",
-      "source": "./plugins/starter-advanced",
-      "description": "Full-featured plugin with rules, skills, agents, commands, hooks, and MCP"
+      "name": "absorbabot",
+      "source": ".",
+      "description": "Fold an imported or spare Grok Bot seat into existing teammates: inventory skills/jobs/routines (including first-run transcript), map ownership, apply on confirm, then hand the user the sidebar delete step."
     }
   ]
 }

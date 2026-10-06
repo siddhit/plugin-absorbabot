@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Absorb a Bot</title>
+  <desc id="desc">A white blood cell performing phagocytosis, its membrane closing around a smaller particle.</desc>
+  <rect width="128" height="128" rx="28" fill="#14302A"/>
+  <circle cx="97" cy="64" r="13" fill="#EF4E38"/>
+  <path d="M68 40c18-16 42-8 44 12" fill="none" stroke="#F6F1E8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M68 88c18 16 42 8 44-12" fill="none" stroke="#F6F1E8" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="50" cy="64" r="34" fill="#F6F1E8"/>
+  <ellipse cx="42" cy="58" rx="13" ry="9.5" transform="rotate(-28 42 58)" fill="#E38A7A"/>
+  <ellipse cx="56" cy="73" rx="11" ry="8" transform="rotate(20 56 73)" fill="#C8544C"/>
+</svg>

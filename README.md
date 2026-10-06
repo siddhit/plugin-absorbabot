@@ -1,34 +1,37 @@
-# Cursor plugin template
+# Absorb a Bot
 
-Build and publish Cursor Marketplace plugins from a single repo.
+Cursor plugin that ships the **Absorb imported bot** skill. Use it when an imported or spare Grok Bot should not keep its own seat.
 
-Two starter plugins are included:
+## What it does
 
-- **starter-simple**: rules and skills only
-- **starter-advanced**: rules, skills, agents, commands, hooks, MCP, and scripts
+The skill folds that spare seat into teammates that already exist:
 
-## Getting started
+1. Inventory the spare bot’s skills, jobs, and routines, including first-run transcript template setup.
+2. Map each claim onto an existing teammate.
+3. Apply ownership only after you confirm the map.
+4. Report what moved, what was left unassigned, and anything that could not be verified.
 
-[Use this template](https://github.com/cursor/plugin-template/generate) to create a new repository, then customize:
+It does not create a new bot, and it does not copy skill files between bots. Skills stay a global library; absorb means who is instructed to run the job after the spare seat is gone.
 
-1. `.cursor-plugin/marketplace.json`: set marketplace `name`, `owner`, and `metadata`.
-2. `plugins/*/.cursor-plugin/plugin.json`: set `name` (lowercase kebab-case), `displayName`, `author`, `description`, `keywords`, `license`, and `version`.
-3. Replace placeholder rules, skills, agents, commands, hooks, scripts, and logos.
+**Agents cannot delete bots.** There is no delete tool. When the spare seat is ready, you remove it yourself: in the sidebar, right-click the bot row → **Delete**.
 
-To add more plugins, see `docs/add-a-plugin.md`.
+## Install
 
-## Single plugin vs multi-plugin
+This repository is one plugin at the root (manifest: `.cursor-plugin/plugin.json`). Submit the repo to the Cursor Marketplace, then install **Absorb a Bot**.
 
-This template defaults to **multi-plugin** (multiple plugins in one repo).
+## Use
 
-For a **single plugin**, move your plugin folder contents to the repository root, keep one `.cursor-plugin/plugin.json`, and remove `.cursor-plugin/marketplace.json`.
+Ask the agent to absorb an imported or spare bot into the current team. Name the spare seat, or let the skill take the only absorb candidate. It proposes a map and waits. After you confirm, it updates destination descriptions, memories, and routines, then tells you the spare bot is ready for the sidebar delete step.
 
-## Submission checklist
+## Layout
 
-- Each plugin has a valid `.cursor-plugin/plugin.json`.
-- Plugin names are unique, lowercase, and kebab-case.
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders.
-- All frontmatter metadata is present in rule, skill, agent, and command files.
-- Logos are committed and referenced with relative paths.
-- `node scripts/validate-template.mjs` passes.
-- Repository link is ready for submission to the Cursor team (Slack or `kniparko@anysphere.com`).
+- `.cursor-plugin/plugin.json` — plugin manifest
+- `.cursor-plugin/marketplace.json` — single marketplace entry (the template validator requires this file)
+- `skills/absorb-imported-bot/SKILL.md` — Absorb imported bot skill
+- `assets/logo.svg` — plugin logo
+
+## Validate
+
+```bash
+node scripts/validate-template.mjs
+```

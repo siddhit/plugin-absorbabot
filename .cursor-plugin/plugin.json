@@ -1,0 +1,13 @@
+{
+  "name": "absorbabot",
+  "displayName": "Absorb a Bot",
+  "version": "0.1.0",
+  "description": "Fold an imported or spare Grok Bot seat into existing teammates: inventory skills/jobs/routines (including first-run transcript), map ownership, apply on confirm, then hand the user the sidebar delete step.",
+  "author": {
+    "name": "Siddhit Sanghavi",
+    "email": "siddhits@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["cursor", "plugin", "skills", "bots", "absorb", "import"],
+  "logo": "assets/logo.svg"
+}
